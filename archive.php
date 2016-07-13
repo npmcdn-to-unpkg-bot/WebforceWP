@@ -9,8 +9,21 @@ if(have_posts()) :
 	$count = 1;
 	$total = $wp_query->post_count;
 	$display = 3;
-	while(have_posts()): the_post(); ?>
-		<div class="col<?php echo floor(100/$display); ?> itemPortfolio">
+	$allTerms = get_terms('type', array('hide_empty'=>1));
+	echo "<ul>";
+	foreach($allTerms as $allTerm){
+		echo "<li class='itemClick' data-slug='".$allTerm->slug."'>".$allTerm->name."</li>";
+	}
+	echo "</ul>";
+	echo "<div class='grid'>";
+	while(have_posts()): the_post();
+		$terms = get_the_terms($post->ID, 'type');
+		$output = "";
+		foreach($terms as $term){
+			$output .= $term->slug.' ';
+		}
+		?>
+		<div class="item col<?php echo floor(100/$display); ?> itemPortfolio <?php echo $output; ?>">
 			<h2><?php the_title(); ?></h2>
 			<?php
 			// Récupérer l'image => thumbnail, medium, large, full
@@ -26,8 +39,9 @@ if(have_posts()) :
 			<div class="clear"></div>
 		<?php } ?>
 		<?php $count++;
-	endwhile; ?>
-<?php else:
+	endwhile;
+	echo "</div>";
+else:
 	echo "Il n'y a pas d'articles sur le blog.";
 endif;
 // On remet la boucle Wordpress par défaut
