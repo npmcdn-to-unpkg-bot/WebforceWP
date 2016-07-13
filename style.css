@@ -46,12 +46,20 @@ body {
 	background-color: #000000;
 }
 
-.col30, .col50, .col70 {
+.col25, .col30, .col33, .col50, .col70 {
 	float: left;
+}
+
+.col25 {
+	width: 25%;
 }
 
 .col30 {
 	width: 30%;
+}
+
+.col33 {
+	width: 33.33%;
 }
 
 .col50 {
@@ -64,4 +72,8 @@ body {
 
 .clear {
 	clear: both;
+}
+
+.itemPortfolio img {
+	max-width: 100%;
 }

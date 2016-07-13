@@ -10,6 +10,9 @@ add_theme_support('custom-header', $args);
 // Add custom background
 add_theme_support('custom-background');
 
+// Add thumbnail
+add_theme_support('post-thumbnails');
+
 // Add menu
 register_nav_menus(array(
 	'main-menu' => 'Menu principal'
@@ -81,6 +84,16 @@ function custom_init(){
 		'supports' => array('title', 'editor', 'thumbnail')
 	);
 	register_post_type('portfolio', $args);
+
+	// On créé la taxonomy (catégorie custom) type de projet pour le portfolio
+	register_taxonomy(
+		'type',
+		'portfolio',
+		array(
+			'label' => 'Type de projet'
+		);
+	);
+
 	// Rafraîchis les permaliens
 	flush_rewrite_rules();
 }
