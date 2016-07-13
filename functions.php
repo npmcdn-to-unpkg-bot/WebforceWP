@@ -91,7 +91,7 @@ function custom_init(){
 		'portfolio',
 		array(
 			'label' => 'Type de projet'
-		);
+		)
 	);
 
 	// Rafraîchis les permaliens
