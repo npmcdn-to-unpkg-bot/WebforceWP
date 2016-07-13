@@ -7,6 +7,9 @@ $args = array(
 );
 add_theme_support('custom-header', $args);
 
+// Add translation
+load_theme_textdomain('webforce');
+
 // Add custom background
 add_theme_support('custom-background');
 

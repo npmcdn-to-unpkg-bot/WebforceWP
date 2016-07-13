@@ -17,7 +17,8 @@ $wpdb->insert(
 
 var_dump($wpdb);
 
-
+echo __('Twenty Sixteen', 'webforce');
+echo __('Ma chaine', 'webforce');
 
 // On modifie la boucle par défaut de Wordpress
 query_posts('order=ASC');
