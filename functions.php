@@ -77,7 +77,8 @@ function custom_init(){
 		'labels' => array(
 			'add_new_item' => 'Ajouter une référence',
 		),
-		'has_archive' => true
+		'has_archive' => true,
+		'supports' => array('title', 'editor', 'thumbnail')
 	);
 	register_post_type('portfolio', $args);
 	// Rafraîchis les permaliens
