@@ -7,5 +7,5 @@ $(function(){
 		console.log($(this).data('slug'));
 		slug = '.'+$(this).data('slug');
 		$grid.isotope({ filter: slug });
-	});
+	});	
 });

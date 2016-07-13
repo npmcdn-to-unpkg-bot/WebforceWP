@@ -83,7 +83,8 @@ function custom_init(){
 			'add_new_item' => 'Ajouter une référence',
 		),
 		'has_archive' => true,
-		'supports' => array('title', 'editor', 'thumbnail')
+		'capability_type' => 'post',
+		'supports' => array('title', 'editor', 'thumbnail', 'custom-fields')
 	);
 	register_post_type('portfolio', $args);
 

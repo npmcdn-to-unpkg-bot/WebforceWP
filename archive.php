@@ -32,8 +32,7 @@ if(have_posts()) :
 			<div>
 				<?php the_content(); ?>
 			</div>
-			<a href="<?php the_permalink(); ?>">Voir l'article</a>
-			<?php echo $count; ?>
+			<a href="<?php the_permalink(); ?>">Voir la référence</a>
 		</div>
 		<?php if($count % $display == 0 || $count == $total){ ?>
 			<div class="clear"></div>
