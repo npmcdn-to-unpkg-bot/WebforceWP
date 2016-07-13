@@ -1,6 +1,24 @@
-<?php get_header(); ?>
+<?php get_header();
 
-<?php
+//$wpdb->get_results("SELECT * FROM {$wpdb->prefix}users");
+$wpdb->insert(
+	"{$wpdb->prefix}options",
+	array(
+		'option_name' => 'webforce3333',
+		'option_value' => 'Webforce 3',
+		'autoload' => 'yes'
+	),
+	array(
+		'%s',
+		'%s',
+		'%s'
+	)
+);
+
+var_dump($wpdb);
+
+
+
 // On modifie la boucle par défaut de Wordpress
 query_posts('order=ASC');
 // On vérifie s'il y a des articles
