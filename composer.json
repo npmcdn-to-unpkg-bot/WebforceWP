@@ -1,0 +1,12 @@
+{
+    "name": "webforce/webforcewp",
+    "authors": [
+        {
+            "name": "Matthieu Mota",
+            "email": "matthieumota@gmail.com"
+        }
+    ],
+    "require": {
+        "components/jquery": "^3.1"
+    }
+}

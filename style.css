@@ -1,0 +1,67 @@
+/*
+  Theme Name:  Webforce
+  Theme URI:   http://github.com/
+  Description: Un thème Wordpress
+  Author:      Matthieu Mota
+  Author URI:  http://www.boxydev.com
+  Version:     1.0.0
+  License:     GNU General Public License v2 or later
+  License URI: http://www.gnu.org/licenses/gpl-2.0.html
+  Text Domain: webforce
+*/
+
+body {
+	margin: 0;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.container {
+	width: 950px;
+	margin: auto;
+}
+
+.logo {
+	width: 50px;
+}
+
+.menu {
+	padding: 0;
+	margin: 10px 0;
+}
+
+.menu li {
+	display: inline;
+}
+
+.menu li a {
+	padding: 10px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.menu li a:hover {
+	background-color: #000000;
+}
+
+.col30, .col50, .col70 {
+	float: left;
+}
+
+.col30 {
+	width: 30%;
+}
+
+.col50 {
+	width: 50%;
+}
+
+.col70 {
+	width: 70%;
+}
+
+.clear {
+	clear: both;
+}
