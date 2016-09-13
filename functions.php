@@ -53,7 +53,7 @@ function custom_scripts(){
 	wp_deregister_script('jquery');
 	wp_register_script('jquery', get_template_directory_uri() . '/vendor/components/jquery/jquery.min.js', array(), time(), true);
 	wp_enqueue_script('jquery');
-	wp_register_script('isotope', 'https://npmcdn.com/isotope-layout@3.0/dist/isotope.pkgd.min.js', array(), null, true);
+	wp_register_script('isotope', 'https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.min.js', array(), null, true);
 	wp_enqueue_script('isotope');
 	wp_register_script('script', get_template_directory_uri() . '/js/script.js', array(), time(), true);
 	wp_enqueue_script('script');
